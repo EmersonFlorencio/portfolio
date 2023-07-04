@@ -1,4 +1,5 @@
 import { Inter } from 'next/font/google'
+import { GlobalStyle } from './global-css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,7 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      <GlobalStyle />
+        {children}
+      </body>
     </html>
   )
 }
