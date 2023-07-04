@@ -37,7 +37,7 @@ export default function Home() {
           <h2>Emerson Florencio</h2>
           <h3>Desenvolvedor Full-Stack</h3>
         </DivContainer>
-        <Link href={'/Home'}>
+        <Link href={'/home'}>
           <BtnStyled>
             Acessar a Home
           </BtnStyled>

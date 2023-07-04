@@ -1,6 +1,7 @@
 "use client"
 
 import { styled } from "styled-components"
+import Link from "next/link"
 
 const HeaderContainer = styled.header`
     border: red solid 2px;
@@ -20,8 +21,8 @@ export default function Header() {
     <HeaderContainer>
       <h2>Emerson Florencio</h2>
       <DivContainer>
-        <p>Projetos</p>
-        <p>Contatos</p>
+        <Link href={'/projetos'}>Projetos</Link>
+        <Link href={'/contatos'}>Contatos</Link>
       </DivContainer>
     </HeaderContainer>
   )
