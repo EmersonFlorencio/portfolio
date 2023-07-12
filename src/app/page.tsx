@@ -9,8 +9,10 @@ import Image from "next/image";
 const MainContainer = styled.main`
   background-color: white;
   height: 700px;
+  width: auto;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   padding: 25px 40px;
@@ -26,6 +28,10 @@ const DivContainer = styled.div`
   height: 400px;
   line-height: 150%;
   font-size: 28px;
+
+  > h3 {
+    color: gray;
+  }
 `
 const DivContainerImage = styled.div`
   display: flex;
@@ -37,8 +43,9 @@ const DivContainerImage = styled.div`
 `
 
 const Container = styled.div`
-  width: 1500px;
+  width: auto;
   height: 800px;
+  flex-wrap: wrap;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -129,7 +136,7 @@ export default function Home() {
               width={500}
               height={450}
               alt="Imagem de uma pessoa programando"
-              property="true"
+              property="false"
             />
         </DivContainerImage>
 
