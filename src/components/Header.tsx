@@ -13,14 +13,14 @@ const HeaderContainer = styled.header`
     border-top-right-radius: 10px;
 `
 const NavContainer = styled.nav`
-  gap: 20px;
+  gap: 40px;
   display: flex;
 
   > a {
     color: white;
     text-decoration: none;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
   } 
 `

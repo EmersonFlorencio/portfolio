@@ -32,7 +32,7 @@ export default function Footer() {
         <p>Linkedin</p>
     </FooterContainer>
       <DivContainer>
-        <p>Desenvolvido por Emerson Florencio</p>
+        <p>Desenvolvido Por Emerson Florencio</p>
       </DivContainer>
     </>
   )

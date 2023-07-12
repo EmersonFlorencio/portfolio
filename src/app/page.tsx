@@ -46,14 +46,15 @@ const Container = styled.div`
 
 const BtnStyled = styled.button`
   position: relative;
-  background-color: transparent;
-  color: #312d2d;
+  background-color: #846ec5;
+  color: white;
   font-size: 17px;
   font-weight: 600;
   border-radius: 10px;
   width: 150px;
   height: 60px;
   margin-top: 15px;
+  padding-top: 20px;
   border: none;
   text-transform: uppercase;
   text-align: center;
@@ -86,13 +87,12 @@ const BtnStyled = styled.button`
   justify-content: center;
   background-color: #231942;
   color: white;
-  margin-top: 35px;
   width: 100%;
-  height: 100%;
+  height: 150%;
   pointer-events: none;
   transform-origin: top;
-  transform: translate(0%,-100%);
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  transform: translate(0%,-79%);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
   }
 
   &:hover::before {
@@ -117,7 +117,7 @@ export default function Home() {
     <>
       <Header />
       <MainContainer>
-        <h1>Olá, Seja bem-vindo</h1>
+        <h1>Olá, Seja Bem-Vindo</h1>
         <Container>
           <DivContainer>
             <h2>Emerson Florencio</h2>
