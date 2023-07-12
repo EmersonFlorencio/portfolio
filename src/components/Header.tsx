@@ -4,7 +4,6 @@ import { styled } from "styled-components"
 import Link from "next/link"
 
 const HeaderContainer = styled.header`
-    border: red solid 2px;
     color: white;
     background-color: #231942;
     display: flex;

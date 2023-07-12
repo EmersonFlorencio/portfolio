@@ -1,7 +1,7 @@
-import { Inter } from 'next/font/google'
+import { Indie_Flower } from 'next/font/google'
 import { GlobalStyle, BodyContainer } from './global-css'
 
-const inter = Inter({ subsets: ['latin'] })
+const Indie = Indie_Flower({ subsets: ['latin'], weight: ['400'] })
 
 export const metadata = {
   title: 'Emerson Florencio - Portfólio',
@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <BodyContainer className={inter.className}>
+      <BodyContainer className={Indie.className}>
       <GlobalStyle />
         {children}
       </BodyContainer>

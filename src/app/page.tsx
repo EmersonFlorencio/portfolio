@@ -4,10 +4,9 @@ import { styled } from "styled-components";
 import Header from '../components/Header';
 import Footer from "../components/Footer";
 import Link from "next/link";
+import Image from "next/image";
 
 const MainContainer = styled.main`
-  border: blue solid 2px;
-  color: blue;
   background-color: white;
   height: 700px;
   display: flex;
@@ -15,12 +14,34 @@ const MainContainer = styled.main`
   justify-content: space-between;
   align-items: center;
   padding: 25px 40px;
+  font-size: 24px;
 `
 const DivContainer = styled.div`
-  border: red solid 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
-  width: 300px;
-  height: 80px;
+  width: 600px;
+  height: 400px;
+  line-height: 150%;
+  font-size: 28px;
+`
+const DivContainerImage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 600px;
+  height: 400px;
+`
+
+const Container = styled.div`
+  width: 1500px;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 `
 
 const BtnStyled = styled.button`
@@ -35,19 +56,22 @@ const BtnStyled = styled.button`
   margin-top: 15px;
   border: none;
   text-transform: uppercase;
+  text-align: center;
   cursor: pointer;
   overflow: hidden;
-  box-shadow: 0 15px 25px rgba(51, 51, 51, 0.2);
+  box-shadow: 0 15px 25px rgba(31, 30, 30, 0.2);
   transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
 
   &::before {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  margin-top: 35px;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  background: linear-gradient(135deg,#7b4397,#dc2430 );
+  background: linear-gradient(135deg,#450068,#dc2430 );
   transform: translate(0%,90%);
   z-index: 99;
   position: relative;
@@ -56,12 +80,13 @@ const BtnStyled = styled.button`
   }
 
   &::after {
-  content: "Clique Aqui";
+  content: "Acessar Home";
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #d2c0f5;
-  margin-top: 15px;
+  background-color: #231942;
+  color: white;
+  margin-top: 35px;
   width: 100%;
   height: 100%;
   pointer-events: none;
@@ -93,13 +118,25 @@ export default function Home() {
       <Header />
       <MainContainer>
         <h1>Olá, Seja bem-vindo</h1>
-        <DivContainer>
-          <h2>Emerson Florencio</h2>
-          <h3>Desenvolvedor Full-Stack</h3>
-        </DivContainer>
+        <Container>
+          <DivContainer>
+            <h2>Emerson Florencio</h2>
+            <h3>Desenvolvedor Full-Stack</h3>
+          </DivContainer>
+        <DivContainerImage>
+            <Image
+              src="/asserts/3426526.jpg"
+              width={500}
+              height={450}
+              alt="Imagem de uma pessoa programando"
+              property="true"
+            />
+        </DivContainerImage>
+
+        </Container>
         <Link href={'/home'}>
-          <BtnStyled>
-            Acessar a Home
+          <BtnStyled name="name">
+            Home
           </BtnStyled>
         </Link>
       </MainContainer>
