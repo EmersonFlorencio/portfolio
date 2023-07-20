@@ -30,6 +30,7 @@ export default function Header() {
     <HeaderContainer>
       <h2>Emerson Florencio</h2>
       <NavContainer>
+        <Link href={'/home'}>Home</Link>
         <Link href={'/projetos'}>Projetos</Link>
         <Link href={'/contatos'}>Contatos</Link>
       </NavContainer>
