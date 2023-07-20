@@ -88,7 +88,7 @@ const BtnStyled = styled.button`
   }
 
   &::after {
-  content: "Acessar Home";
+  content: "Acessar Página";
   display: flex;
   align-items: center;
   justify-content: center;
