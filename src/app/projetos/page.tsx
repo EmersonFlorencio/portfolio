@@ -14,7 +14,7 @@ import 'swiper/css/effect-fade';
 
 const DivContainer = styled.div`
   border: blue solid 2px;
-  color: blue;
+  color: black;
   background-color: white;
   height: 600px;
   display: flex;
@@ -29,6 +29,16 @@ const DivSwiper = styled.div`
   border: red solid 2px;
   height: 600px;
   width: 800px;
+
+  >div{
+    >div{
+      >span{
+        height: 16px;
+        width: 16px;
+        background-color: #231942;
+      }
+    }
+  }
 `
 
 const DivImage  = styled.div`
@@ -41,6 +51,14 @@ const DivImage  = styled.div`
   >img {
     object-fit: cover;
     width: 100%;
+  }
+
+  >img:hover{
+    cursor: grab;
+  }
+
+  >img:active{
+    cursor: grabbing;
   }
 `
 
