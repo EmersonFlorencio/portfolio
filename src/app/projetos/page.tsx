@@ -16,7 +16,7 @@ const DivContainer = styled.div`
   border: blue solid 2px;
   color: black;
   background-color: white;
-  height: 600px;
+  height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

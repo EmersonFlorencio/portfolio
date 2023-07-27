@@ -1,9 +1,20 @@
 "use client"
 
-import { styled } from "styled-components"
+import { styled } from "styled-components";
 import Image from "next/image";
-import Header from "../../components/Header"
-import Footer from "../../components/Footer"
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+
+import { CssIcon } from "../../components/icons/css-icon";
+import { HtmlIcon } from '../../components/icons/html-icon';
+import { JavascriptIcon } from "../../components/icons/javascript-icon";
+import { ReactIcon } from "../../components/icons/react-icon";
+import { NodejsIcon } from "../../components/icons/nodejs-icon";
+import { TypescriptIcon } from "../../components/icons/typescript-icon";
+import { ReduxIcon } from "../../components/icons/redux-icon";
+import { DockerIcon } from "../../components/icons/docker-icon";
+import { MysqlIcon } from "../../components/icons/mysql-icon";
+import { MongodbIcon } from "../../components/icons/mongodb-icon";
 
 const MainContainer = styled.main`
     color: black;
@@ -23,6 +34,16 @@ const DivContainerText = styled.div`
   height: 400pxd;
   font-size: 20px;
   color: gray;
+
+  >p {
+    font-size: 28px;
+  }
+
+  >h2 {
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 `
 
 const DivContainerImage = styled.div`
@@ -42,10 +63,21 @@ export default function Home() {
         <h1>Sobre Mim</h1>
         <DivContainer>
           <DivContainerText>
-            <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
             Architecto in eveniet vero amet repudiandae optio, beatae porro fuga, 
             minus incidunt necessitatibus fugit repellendus consectetur reiciendis id magnam nobis veritatis eum.
-            </h2>
+            </p>
+            <h2>Tecnologias</h2>
+            <CssIcon />
+            <HtmlIcon />
+            <JavascriptIcon />
+            <ReactIcon />
+            <NodejsIcon />
+            <TypescriptIcon />
+            <ReduxIcon />
+            <DockerIcon />
+            <MysqlIcon />
+            <MongodbIcon />
           </DivContainerText>
             <DivContainerImage>
           <Image

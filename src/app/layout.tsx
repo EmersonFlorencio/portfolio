@@ -1,4 +1,5 @@
 import { Indie_Flower } from 'next/font/google'
+import StyledComponentsRegistry from './registry'
 import { GlobalStyle, BodyContainer } from './global-css'
 import { register } from 'swiper/element/bundle';
 
@@ -24,8 +25,10 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <BodyContainer className={Indie.className}>
-      <GlobalStyle />
-        {children}
+        <GlobalStyle />
+          <StyledComponentsRegistry>
+            {children}
+          </StyledComponentsRegistry>
       </BodyContainer>
     </html>
   )
