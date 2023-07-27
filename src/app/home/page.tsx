@@ -5,22 +5,13 @@ import Image from "next/image";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
-import { CssIcon } from "../../components/icons/css-icon";
-import { HtmlIcon } from '../../components/icons/html-icon';
-import { JavascriptIcon } from "../../components/icons/javascript-icon";
-import { ReactIcon } from "../../components/icons/react-icon";
-import { NodejsIcon } from "../../components/icons/nodejs-icon";
-import { TypescriptIcon } from "../../components/icons/typescript-icon";
-import { ReduxIcon } from "../../components/icons/redux-icon";
-import { DockerIcon } from "../../components/icons/docker-icon";
-import { MysqlIcon } from "../../components/icons/mysql-icon";
-import { MongodbIcon } from "../../components/icons/mongodb-icon";
+import { icons } from "../../utils/icons";
 
 const MainContainer = styled.main`
     color: black;
     background-color: white;
     height: 600px;
-    padding: 10px 20px;
+    padding: 15px 34px;
     font-size: 30px;
 `
 
@@ -54,6 +45,23 @@ const DivContainerImage = styled.div`
   width: 800px;
   height: 400px;
 `
+const DivTech = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 900px;
+  height: 250px;
+  gap: 8px;
+
+  >div{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    z-index: 99;
+  }
+`
 
 export default function Home() {
   return (
@@ -68,16 +76,13 @@ export default function Home() {
             minus incidunt necessitatibus fugit repellendus consectetur reiciendis id magnam nobis veritatis eum.
             </p>
             <h2>Tecnologias</h2>
-            <CssIcon />
-            <HtmlIcon />
-            <JavascriptIcon />
-            <ReactIcon />
-            <NodejsIcon />
-            <TypescriptIcon />
-            <ReduxIcon />
-            <DockerIcon />
-            <MysqlIcon />
-            <MongodbIcon />
+            <DivTech>
+            {icons.map((icon) => (
+              <div key={icon.id}>
+                {icon.icon}
+              </div>
+            ))}
+            </DivTech>
           </DivContainerText>
             <DivContainerImage>
           <Image

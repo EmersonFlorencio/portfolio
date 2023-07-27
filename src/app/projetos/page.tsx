@@ -8,9 +8,13 @@ import { Pagination, EffectFade } from 'swiper/modules';
 import { data } from "../../utils/data";
 import Image from "next/image";
 
+import { CssIcon } from "../../components/icons/css-icon";
+import { HtmlIcon } from '../../components/icons/html-icon';
+import { JavascriptIcon } from "../../components/icons/javascript-icon";
+import { ReactIcon } from "../../components/icons/react-icon";
+
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
-
 
 const DivContainer = styled.div`
   border: blue solid 2px;
@@ -60,8 +64,23 @@ const DivImage  = styled.div`
   >img:active{
     cursor: grabbing;
   }
+
+  >h4 {
+    font-size: 20px;
+  }
 `
 
+const DivTech = styled.div`
+  border: green solid 2px;
+  display: flex;
+  flex-direction: row;
+
+  >svg {
+    height: 60px;
+    width: 60px;
+    opacity: 1;
+  }
+`
 
 export default function Projetos() {
   return (
@@ -86,8 +105,14 @@ export default function Projetos() {
                 width={300}
                 height={350}
                 />
-                <p>Icones tecnologias</p>
-                <p>Descrição do Projeto</p>
+                <h4>Tecnologias Utilizadas</h4>
+                <DivTech>
+                  <ReactIcon />
+                  <JavascriptIcon />
+                  <HtmlIcon /> 
+                  <CssIcon />
+                </DivTech>
+                <h4>Descrição do Projeto</h4>
                 <p>Link Repositorio:</p>
                 <p>Link Deploy:</p>
                 </DivImage>
@@ -99,4 +124,4 @@ export default function Projetos() {
       <Footer />
     </>
   )
-}
+};
