@@ -3,15 +3,13 @@
 import styled from "styled-components";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import Button from "../../components/Button";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, EffectFade } from 'swiper/modules';
 import { data } from "../../utils/data";
 import Image from "next/image";
+import { CrossIcon } from "../../components/icons/cross-icon";
 
-import { CssIcon } from "../../components/icons/css-icon";
-import { HtmlIcon } from '../../components/icons/html-icon';
-import { JavascriptIcon } from "../../components/icons/javascript-icon";
-import { ReactIcon } from "../../components/icons/react-icon";
 
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
@@ -51,6 +49,7 @@ const DivImage  = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: white;
 
   >img {
     object-fit: cover;
@@ -66,7 +65,7 @@ const DivImage  = styled.div`
   }
 
   >h4 {
-    font-size: 20px;
+    font-size: 24px;
   }
 `
 
@@ -75,11 +74,88 @@ const DivTech = styled.div`
   display: flex;
   flex-direction: row;
 
-  >svg {
-    height: 60px;
-    width: 60px;
-    opacity: 1;
+  >div{
+    >div{
+      >svg {
+        height: 60px;
+        width: 60px;
+        opacity: 0.6;
+
+        &:hover{
+          opacity: 1;
+        }
+      }
+    }
   }
+`
+
+const DivButton = styled.div`
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+
+    >a{
+      text-decoration: none;
+      background:#231942;
+      color: white;
+      font-family: inherit;
+      padding: 0.35em;
+      padding-left: 1.2em;
+      font-size: 18px;
+      font-weight: 500;
+      border-radius: 0.9em;
+      border: none;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      box-shadow: inset 0 0 1.6em -0.6em #714da6;
+      overflow: hidden;
+      position: relative;
+      height: 2.8em;
+      padding-right: 3.3em;
+  
+      &&:hover {
+        transform: translateX(0.1em);
+      }
+  
+      &&:active{
+        transform: scale(0.95);
+      }
+  
+      >div{
+        background: white;
+        margin-left: 1em;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2.2em;
+        width: 2.2em;
+        border-radius: 0.7em;
+        box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+        right: 0.3em;
+        transition: all 0.3s;
+  
+        &:hover{
+        width: calc(100% - 0.6em);
+        transform: translateX(0.1em);
+        
+        &:active{
+          transform: scale(0.95);
+        }
+  
+      }
+        >svg{
+          width: 1.1em;
+          transition: transform 0.3s;
+          color: #7b52b9;
+  
+          &:hover{
+            transform: translateX(0.1em);
+          }
+        }
+      }
+    }
 `
 
 export default function Projetos() {
@@ -107,14 +183,35 @@ export default function Projetos() {
                 />
                 <h4>Tecnologias Utilizadas</h4>
                 <DivTech>
-                  <ReactIcon />
-                  <JavascriptIcon />
-                  <HtmlIcon /> 
-                  <CssIcon />
+                    {item.icon.map((e: any, index: number) => (
+                      <div key={index}>
+                        <div>{ e.iconImg }</div>
+                      </div>
+                    ))}
                 </DivTech>
                 <h4>Descrição do Projeto</h4>
-                <p>Link Repositorio:</p>
-                <p>Link Deploy:</p>
+                <DivButton>
+                <Button
+                  component="a"
+                  href={'https://github.com/EmersonFlorencio'}
+                  target="_blank"
+                  >
+                    Repositorio
+                    <div>
+                    <CrossIcon />
+                    </div>
+                  </Button>
+                <Button
+                component="a"
+                href={'https://github.com/EmersonFlorencio'}
+                target="_blank"
+                >
+                  Deploy
+                  <div>
+                  <CrossIcon />
+                  </div>
+                </Button>
+                </DivButton>
                 </DivImage>
               </SwiperSlide>
             ))}

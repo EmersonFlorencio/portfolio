@@ -5,7 +5,7 @@ import Image from "next/image";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
-import { icons } from "../../utils/icons";
+import { icons } from "../../utils/data";
 
 const MainContainer = styled.main`
     color: black;
