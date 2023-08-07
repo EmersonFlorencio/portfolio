@@ -29,11 +29,11 @@ const DivSwiper = styled.div`
   display: flex;
   flex-direction: row;
   border: red solid 2px;
-  height: 600px;
+  height: 900px;
   width: 800px;
 
   >div{
-    >div{
+    >div:last-child{
       >span{
         height: 16px;
         width: 16px;
@@ -50,10 +50,10 @@ const DivImage  = styled.div`
   align-items: center;
   flex-direction: column;
   background-color: white;
+  gap: 5px;
 
   >img {
     object-fit: cover;
-    width: 100%;
   }
 
   >img:hover{
@@ -90,72 +90,63 @@ const DivTech = styled.div`
 `
 
 const DivButton = styled.div`
-    display: flex;
-    width: 400px;
-    justify-content: space-between;
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
 
-    >a{
-      text-decoration: none;
-      background:#231942;
-      color: white;
-      font-family: inherit;
-      padding: 0.35em;
-      padding-left: 1.2em;
-      font-size: 18px;
-      font-weight: 500;
-      border-radius: 0.9em;
-      border: none;
-      letter-spacing: 0.05em;
+  >a {
+  text-decoration: none;
+  background:#231942;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+
+    >div {
+      background: white;
+      margin-left: 1em;
+      position: absolute;
       display: flex;
       align-items: center;
-      box-shadow: inset 0 0 1.6em -0.6em #714da6;
-      overflow: hidden;
-      position: relative;
-      height: 2.8em;
-      padding-right: 3.3em;
+      justify-content: center;
+      height: 2.2em;
+      width: 2.2em;
+      border-radius: 0.7em;
+      box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+      right: 0.3em;
+      transition: all 0.3s;
   
-      &&:hover {
-        transform: translateX(0.1em);
-      }
-  
-      &&:active{
-        transform: scale(0.95);
-      }
-  
-      >div{
-        background: white;
-        margin-left: 1em;
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 2.2em;
-        width: 2.2em;
-        border-radius: 0.7em;
-        box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
-        right: 0.3em;
-        transition: all 0.3s;
-  
-        &:hover{
+      &:hover{
         width: calc(100% - 0.6em);
         transform: translateX(0.1em);
-        
-        &:active{
-          transform: scale(0.95);
-        }
-  
       }
-        >svg{
+        
+      &:active{
+        transform: scale(0.95);
+      }
+      
+      > svg {
           width: 1.1em;
           transition: transform 0.3s;
-          color: #7b52b9;
   
-          &:hover{
-            transform: translateX(0.1em);
-          }
+        &:hover {
+          transform: translateX(0.1em);
         }
       }
     }
+  }
 `
 
 export default function Projetos() {
@@ -171,14 +162,15 @@ export default function Projetos() {
           spaceBetween={20}
           slidesPerView={1}
           pagination={{ clickable: true, dynamicBullets: true }}
-        >
+          >
             {data.map((item) => (
               <SwiperSlide key={item.id}>
                 <DivImage>
+                <h4>Nome do Projeto</h4>
                 <Image
                 src={ item.url } 
                 alt="" 
-                width={300}
+                width={750}
                 height={350}
                 />
                 <h4>Tecnologias Utilizadas</h4>
@@ -189,7 +181,6 @@ export default function Projetos() {
                       </div>
                     ))}
                 </DivTech>
-                <h4>Descrição do Projeto</h4>
                 <DivButton>
                 <Button
                   component="a"
