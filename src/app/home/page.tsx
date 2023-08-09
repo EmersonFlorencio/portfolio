@@ -8,16 +8,32 @@ import Footer from "../../components/Footer";
 import { icons } from "../../utils/data";
 
 const MainContainer = styled.main`
-    color: black;
-    background-color: white;
-    height: 600px;
-    padding: 15px 34px;
-    font-size: 30px;
+  color: black;
+  background-color: white;
+  height: 600px;
+  padding: 15px 34px;
+  font-size: 30px;
+
+  @media(max-width: 1384px){
+  border: green solid 2px;
+  font-size: 24px;
+  } 
+
+  @media(max-width: 1188px){
+    height: 1000px;
+  } 
 `
 
 const DivContainer = styled.div`
   flex: 1;
   display: flex;
+
+  @media(max-width: 1188px){
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 const DivContainerText = styled.div`
@@ -27,13 +43,67 @@ const DivContainerText = styled.div`
   color: gray;
 
   >p {
-    font-size: 28px;
+    font-size: 24px;
+  }
+
+  >h1{
+    color: black;
   }
 
   >h2 {
     color: black;
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+
+  @media(max-width: 1384px){
+    border: red solid 2px;
+    width: 700px;
+  }
+  
+  @media(max-width: 1188px){
+    >h1, h2 {
+      text-align: center;
+    }
+  }
+
+  @media(max-width: 778px){
+    width: 650px;
+    height: 400px;
+
+    >p {
+      font-size: 18px;
+      color: black;
+    }
+  }
+
+  @media(max-width: 748px){
+    width: 550px;
+    height: 400px;
+
+    >p {
+      font-size: 18px;
+      color: black;
+    }
+  }
+
+  @media(max-width: 748px){
+    width: 450px;
+    height: 300px;
+    >p {
+      font-size: 18px;
+      color: black;
+    }
+  }
+
+  @media(max-width: 530px){
+    width: 400px;
+    height: 300px;
+    margin-top: 15px;
+    >p {
+      font-size: 18px;
+      color: black;
+    }
   }
 `
 
@@ -44,6 +114,25 @@ const DivContainerImage = styled.div`
   text-align: center;
   width: 800px;
   height: 400px;
+
+  @media(max-width: 748px){
+    width: 400px;
+    height: 400px;
+  }
+
+  @media(max-width: 634px){
+    margin-top: 80px;
+    margin-bottom: 30px;
+    width: 300px;
+    height: 300px;
+  }
+
+  @media(max-width: 530px){
+    margin-top: 120px;
+    margin-bottom: 80px;
+    width: 200px;
+    height: 200px;
+  }
 `
 const DivTech = styled.div`
   display: flex;
@@ -61,6 +150,63 @@ const DivTech = styled.div`
     height: 100px;
     z-index: 99;
   }
+
+  @media(max-width: 1384px){
+    border: red solid 2px;
+    width: 700px;
+  } 
+
+  @media(max-width: 778px){
+    border: green solid 2px;
+    width: 650px;
+    justify-content: center;
+    align-items: center;
+
+    >div{
+      width: 80px;
+      height: 80px;
+      z-index: 99;
+    }
+  }
+
+  @media(max-width: 748px){
+    border: green solid 2px;
+    width: 550px;
+    justify-content: center;
+    align-items: center;
+
+    >div{
+      width: 60px;
+      height: 60px;
+      z-index: 99;
+    }
+  }
+
+  @media(max-width: 634px){
+    border: green solid 2px;
+    width: 450px;
+    justify-content: center;
+    align-items: center;
+
+    >div{
+      width: 60px;
+      height: 60px;
+      z-index: 99;
+    }
+  }
+
+  @media(max-width: 530px){
+    border: green solid 2px;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+
+    >div{
+      width: 60px;
+      height: 60px;
+      z-index: 99;
+    }
+  }
 `
 
 export default function Home() {
@@ -68,9 +214,9 @@ export default function Home() {
     <>
       <Header />
       <MainContainer>
-        <h1>Sobre Mim</h1>
         <DivContainer>
           <DivContainerText>
+            <h1>Sobre Mim</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
             Architecto in eveniet vero amet repudiandae optio, beatae porro fuga, 
             minus incidunt necessitatibus fugit repellendus consectetur reiciendis id magnam nobis veritatis eum.
@@ -87,7 +233,7 @@ export default function Home() {
             <DivContainerImage>
           <Image
               src="/asserts/3426526.jpg"
-              width={500}
+              width={400}
               height={400}
               alt="Imagem de uma pessoa programando"
               property="false"
