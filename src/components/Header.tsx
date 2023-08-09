@@ -33,6 +33,16 @@ const HeaderContainer = styled.header`
         height: 50px;
       }
     }
+
+    @media(max-width: 425px){
+      width: 380px;
+      height: 130px;
+      justify-content: center;
+      >div{
+        width: 200px;
+        height: 50px;
+      }
+    }
 `
 const NavContainer = styled.nav`
   gap: 40px;
@@ -55,6 +65,14 @@ const NavContainer = styled.nav`
     display: flex;
     justify-content: space-evenly;
   }
+
+  @media(max-width: 425px){
+    height: 50px;
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
 
   > a {
     color: white;

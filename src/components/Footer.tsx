@@ -25,8 +25,12 @@ const FooterContainer = styled.footer`
   } 
 
   @media(max-width: 470px){
-      width: 450px;
-    }
+    width: 450px;
+  }
+
+  @media(max-width: 470px){
+    width: 380px;
+  }
 `
 const DivContainer = styled.div`
   color: white;
@@ -40,8 +44,15 @@ const DivContainer = styled.div`
   border-bottom-right-radius: 10px;
 
   @media(max-width: 470px){
-      width: 450px;
+    width: 450px;
+  }
+
+  @media(max-width: 425px){
+    width: 380px;
+    >p{
+      font-size: 20px;
     }
+  }
 `
 
 export default function Footer() {

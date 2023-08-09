@@ -15,13 +15,16 @@ const MainContainer = styled.main`
   font-size: 30px;
 
   @media(max-width: 1384px){
-  border: green solid 2px;
   font-size: 24px;
   } 
 
   @media(max-width: 1188px){
     height: 1000px;
   } 
+
+  @media(max-width: 425px){
+    width: 380px;
+  }
 `
 
 const DivContainer = styled.div`
@@ -57,7 +60,6 @@ const DivContainerText = styled.div`
   }
 
   @media(max-width: 1384px){
-    border: red solid 2px;
     width: 700px;
   }
   
@@ -105,6 +107,16 @@ const DivContainerText = styled.div`
       color: black;
     }
   }
+
+  @media(max-width: 425px){
+    width: 360px;
+    height: 300px;
+    border: red solid 2px;
+    >p {
+      font-size: 18px;
+      color: black;
+    }
+  }
 `
 
 const DivContainerImage = styled.div`
@@ -133,6 +145,14 @@ const DivContainerImage = styled.div`
     width: 200px;
     height: 200px;
   }
+
+
+  @media(max-width: 425px){
+    >img{
+      width: 300px;
+      height: 300px;
+    }
+  }
 `
 const DivTech = styled.div`
   display: flex;
@@ -152,12 +172,10 @@ const DivTech = styled.div`
   }
 
   @media(max-width: 1384px){
-    border: red solid 2px;
     width: 700px;
   } 
 
   @media(max-width: 778px){
-    border: green solid 2px;
     width: 650px;
     justify-content: center;
     align-items: center;
@@ -170,11 +188,10 @@ const DivTech = styled.div`
   }
 
   @media(max-width: 748px){
-    border: green solid 2px;
     width: 550px;
     justify-content: center;
     align-items: center;
-
+    margin-top: -40px;
     >div{
       width: 60px;
       height: 60px;
@@ -183,7 +200,6 @@ const DivTech = styled.div`
   }
 
   @media(max-width: 634px){
-    border: green solid 2px;
     width: 450px;
     justify-content: center;
     align-items: center;
@@ -196,8 +212,19 @@ const DivTech = styled.div`
   }
 
   @media(max-width: 530px){
-    border: green solid 2px;
     width: 400px;
+    justify-content: center;
+    align-items: center;
+
+    >div{
+      width: 60px;
+      height: 60px;
+      z-index: 99;
+    }
+  }
+
+  @media(max-width: 425px){
+    width: 360px;
     justify-content: center;
     align-items: center;
 
