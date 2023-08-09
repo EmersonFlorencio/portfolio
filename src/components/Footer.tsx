@@ -23,6 +23,10 @@ const FooterContainer = styled.footer`
     font-weight: 600;
     display: flex;
   } 
+
+  @media(max-width: 470px){
+      width: 450px;
+    }
 `
 const DivContainer = styled.div`
   color: white;
@@ -34,6 +38,10 @@ const DivContainer = styled.div`
   text-align: center;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+
+  @media(max-width: 470px){
+      width: 450px;
+    }
 `
 
 export default function Footer() {

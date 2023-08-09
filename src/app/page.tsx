@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const MainContainer = styled.main`
+  border: red solid 2px;
   background-color: white;
   height: 700px;
   width: auto;
@@ -17,8 +18,28 @@ const MainContainer = styled.main`
   align-items: center;
   padding: 25px 40px;
   font-size: 24px;
+
+  @media(max-width: 1347px){
+    height: 900px;
+  }
+
+  @media(max-width: 1024px){
+    height: 900px;
+  }
+
+  @media(max-width: 557px){
+    font-size: 20px;
+  }
+
+  @media(max-width: 470px){
+    font-size: 14px;
+    width: 450px;
+    height: 800px;
+  }
+
 `
 const DivContainer = styled.div`
+  border: blue solid 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,6 +49,26 @@ const DivContainer = styled.div`
   height: 400px;
   line-height: 150%;
   font-size: 28px;
+
+  @media(max-width: 1347px){
+    height: 200px;
+  }
+
+  @media(max-width: 1024px){
+   height: 200px;
+   width: 400px;
+  }
+
+  @media(max-width: 557px){
+    font-size: 20px;
+    height: 150px;
+  }
+
+  @media(max-width: 470px){
+    font-size: 24px;
+    width: 350px;
+    height: 200px;
+  }
 
   > h3 {
     color: gray;
@@ -40,6 +81,20 @@ const DivContainerImage = styled.div`
   text-align: center;
   width: 600px;
   height: 400px;
+
+  @media(max-width: 557px){
+    >img{
+      width: 400px;
+      height: 400px;
+    }
+  }
+
+  @media(max-width: 470px){
+    >img{
+      width: 350px;
+      height: 350px;
+    }
+  }
 `
 
 const Container = styled.div`
