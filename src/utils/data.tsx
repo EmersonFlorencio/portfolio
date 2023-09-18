@@ -9,6 +9,8 @@ import { DockerIcon } from "../components/icons/docker-icon";
 import { MysqlIcon } from "../components/icons/mysql-icon";
 import { MongodbIcon } from "../components/icons/mongodb-icon";
 
+import TrybetunesIMG from '../../public/asserts/TrybeTunesImg.png'
+
 
 export const icons = [
   {id: 1, icon: <ReactIcon />},
@@ -28,7 +30,7 @@ export const data = [
     id: 1, 
     name: 'TrybeTunes',
     icon: [{iconImg: <ReactIcon />},{iconImg: <JavascriptIcon />}, {iconImg: <HtmlIcon />},{iconImg: <CssIcon  />}],
-    img: "https://imgur.com/hptysct",
+    imgUrl: TrybetunesIMG,
     urlDeploy: 'https://trybetunes-lemon.vercel.app/',
     urlRepository: 'https://github.com/EmersonFlorencio/trybetunes',
   },
@@ -36,7 +38,7 @@ export const data = [
     id: 2,
     name: 'Star Wars Planets Search',
     icon: [{ iconImg: <ReactIcon /> }, { iconImg: <JavascriptIcon /> }, { iconImg: <HtmlIcon /> } , { iconImg: <CssIcon /> }], 
-    img: "https://imgur.com/hptysct",
+    imgUrl: TrybetunesIMG,
     urlDeploy: 'https://star-wars-planets-search-five.vercel.app/',
     urlRepository: 'https://github.com/EmersonFlorencio/Star-Wars-Planets-Search',
   },
@@ -44,7 +46,7 @@ export const data = [
     id: 3,
     name: 'TrybeWallet',
     icon: [{iconImg: <ReactIcon />},{iconImg: <JavascriptIcon />}, {iconImg: <HtmlIcon />},{iconImg: <CssIcon  />}, {iconImg: <ReduxIcon />}],
-    img: "https://imgur.com/hptysct",
+    imgUrl: TrybetunesIMG,
     urlDeploy: '',
     urlRepository: 'https://github.com/EmersonFlorencio/TrybeWallet',
   },
@@ -52,7 +54,7 @@ export const data = [
     id: 4, 
     name: 'Solar System',
     icon: [{iconImg: <ReactIcon />},{iconImg: <JavascriptIcon />}, {iconImg: <HtmlIcon />},{iconImg: <CssIcon  />}],
-    img: "https://imgur.com/hptysct",
+    imgUrl: TrybetunesIMG,
     urlDeploy: '',
     urlRepository: 'https://github.com/EmersonFlorencio/Solar-System',
   },
@@ -60,7 +62,7 @@ export const data = [
     id: 5, 
     name: 'Trybers and Dragons',
     icon: [{iconImg: <TypescriptIcon />},],
-    img: "https://imgur.com/hptysct",
+    imgUrl: TrybetunesIMG,
     urlDeploy: '',
     urlRepository: 'https://github.com/EmersonFlorencio/Projeto-Trybers-and-Dragons',
   },
@@ -68,7 +70,7 @@ export const data = [
     id: 6, 
     name: 'Blogs Api',
     icon: [{iconImg: <JavascriptIcon />}, {iconImg: <DockerIcon />}],
-    img: "https://imgur.com/hptysct",
+    imgUrl: TrybetunesIMG,
     urlDeploy: '',
     urlRepository: 'https://github.com/EmersonFlorencio/Blogs-Api',
   },

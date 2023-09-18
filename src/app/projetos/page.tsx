@@ -173,7 +173,7 @@ export default function Projetos() {
                 <DivImage>
                 <h4>{item.name}</h4>
                 <Image
-                src={ item.img } 
+                src={ item.imgUrl } 
                 alt="" 
                 width={700}
                 height={300}
