@@ -13,6 +13,7 @@ import { CrossIcon } from "../../components/icons/cross-icon";
 
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
+import { GithubIcon } from "../../components/icons/github-icon";
 
 const DivContainer = styled.div`
   border: blue solid 2px;
@@ -50,10 +51,14 @@ const DivImage  = styled.div`
   align-items: center;
   flex-direction: column;
   background-color: white;
-  gap: 5px;
+  gap: 10px;
 
   >img {
     object-fit: cover;
+    border: #518bcc solid 5px;
+    border-radius: 5px;
+    box-shadow: 10px 15px 20px 0px rgba(0,0,0,0.75);
+    margin-bottom: 20px;
   }
 
   >img:hover{
@@ -166,12 +171,12 @@ export default function Projetos() {
             {data.map((item) => (
               <SwiperSlide key={item.id}>
                 <DivImage>
-                <h4>Nome do Projeto</h4>
+                <h4>{item.name}</h4>
                 <Image
                 src={ item.url } 
                 alt="" 
-                width={750}
-                height={350}
+                width={700}
+                height={300}
                 />
                 <h4>Tecnologias Utilizadas</h4>
                 <DivTech>
@@ -184,24 +189,29 @@ export default function Projetos() {
                 <DivButton>
                 <Button
                   component="a"
-                  href={'https://github.com/EmersonFlorencio'}
+                  href={item.urlRepository}
                   target="_blank"
                   >
+                    <GithubIcon />
                     Repositorio
                     <div>
                     <CrossIcon />
                     </div>
                   </Button>
-                <Button
-                component="a"
-                href={'https://github.com/EmersonFlorencio'}
-                target="_blank"
-                >
-                  Deploy
-                  <div>
-                  <CrossIcon />
-                  </div>
-                </Button>
+                {
+                  item.urlDeploy !== '' ? 
+                    <Button
+                    component="a"
+                    href={item.urlDeploy}
+                    target="_blank"
+                    >
+                      Deploy
+                      <div>
+                      <CrossIcon />
+                      </div>
+                    </Button>
+                    : null
+                }
                 </DivButton>
                 </DivImage>
               </SwiperSlide>
