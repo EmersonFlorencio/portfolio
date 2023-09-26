@@ -58,7 +58,7 @@ const DivImage  = styled.div`
     border: #518bcc solid 5px;
     border-radius: 5px;
     box-shadow: 10px 15px 20px 0px rgba(0,0,0,0.75);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   >img:hover{
@@ -70,7 +70,7 @@ const DivImage  = styled.div`
   }
 
   >h4 {
-    font-size: 24px;
+    font-size: 28px;
   }
 `
 
