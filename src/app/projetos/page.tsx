@@ -16,7 +16,6 @@ import 'swiper/css/effect-fade';
 import { GithubIcon } from "../../components/icons/github-icon";
 
 const DivContainer = styled.div`
-  border: blue solid 2px;
   color: black;
   background-color: white;
   height: 700px;
@@ -35,7 +34,6 @@ const DivContainer = styled.div`
 const DivSwiper = styled.div`
   display: flex;
   flex-direction: row;
-  border: red solid 2px;
   height: 900px;
   width: 800px;
 
@@ -76,15 +74,13 @@ const DivSwiper = styled.div`
 
     >div{
       >div:last-child{
-        bottom: -10px;
+        bottom: 5px;
       }
     }
-
   }
 `
 
 const DivImage  = styled.div`
-  border: blue solid 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,7 +152,6 @@ const DivImage  = styled.div`
 `
 
 const DivTech = styled.div`
-  border: green solid 2px;
   display: flex;
   flex-direction: row;
 
