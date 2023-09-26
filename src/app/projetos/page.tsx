@@ -25,6 +25,12 @@ const DivContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 25px 40px;
+
+  @media(max-width: 425px){
+    width: 380px;
+    font-size: 16px;
+  }
+
 `
 const DivSwiper = styled.div`
   display: flex;
@@ -41,6 +47,39 @@ const DivSwiper = styled.div`
         background-color: #231942;
       }
     }
+  }
+
+  @media(max-width: 826px){
+    height: 600px;
+    width: 700px;
+  }
+
+  @media(max-width: 784px) {
+    height: 600px;
+    width: 500px;
+  }
+
+  @media(max-width: 512px) {
+    height: 590px;
+    width: 400px;
+
+    >div{
+      >div:last-child{
+        bottom: -5px;
+      }
+    }
+  }
+
+  @media(max-width: 425px) {
+    height: 650px;
+    width: 350px;
+
+    >div{
+      >div:last-child{
+        bottom: -10px;
+      }
+    }
+
   }
 `
 
@@ -72,6 +111,48 @@ const DivImage  = styled.div`
   >h4 {
     font-size: 28px;
   }
+
+  @media(max-width: 826px) {
+    >img{
+      height: 300px;
+      width: 600px;
+    }
+  }
+
+  @media(max-width: 784px) {
+    >img{
+      height: 300px;
+      width: 400px;
+    }
+
+    >h4{
+      font-size: 24px;
+    }
+  }
+
+  @media(max-width: 512px) {
+    >img{
+      height: 300px;
+      width: 300px;
+    }
+
+    >h4{
+      font-size: 24px;
+    }
+  }
+
+  @media(max-width: 425px) {
+    
+
+    >img{
+      height: 280px;
+      width: 300px;
+    }
+
+    >h4{
+      font-size: 20px;
+    }
+  }
 `
 
 const DivTech = styled.div`
@@ -88,6 +169,11 @@ const DivTech = styled.div`
 
         &:hover{
           opacity: 1;
+        }
+
+        @media(max-width: 425px){
+          height: 55px;
+          width: 55px;
         }
       }
     }
@@ -150,6 +236,21 @@ const DivButton = styled.div`
           transform: translateX(0.1em);
         }
       }
+    }
+  }
+
+  @media(max-width: 512px) {
+      width: 350px;
+  }
+
+  @media(max-width: 425px) {
+      width: 300px;
+      gap: 15px;
+      display: flex;
+      flex-direction: column;
+
+    >a{
+      height: 2.4em;
     }
   }
 `
