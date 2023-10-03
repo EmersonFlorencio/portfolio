@@ -7,7 +7,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 const MainContainer = styled.main`
-  border: red solid 2px;
   background-color: white;
   height: 700px;
   width: auto;
@@ -39,7 +38,6 @@ const MainContainer = styled.main`
 
 `
 const DivContainer = styled.div`
-  border: blue solid 2px;
   display: flex;
   justify-content: center;
   align-items: center;

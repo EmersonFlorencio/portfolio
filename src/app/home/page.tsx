@@ -244,9 +244,11 @@ export default function Home() {
         <DivContainer>
           <DivContainerText>
             <h1>Sobre Mim</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-            Architecto in eveniet vero amet repudiandae optio, beatae porro fuga, 
-            minus incidunt necessitatibus fugit repellendus consectetur reiciendis id magnam nobis veritatis eum.
+            <p>Me chamo Emerson, tenho 31 anos e moro em São Paulo/SP. 
+              <br />
+              Sou desenvolvedor Full-Stack formado pela Trybe com conhecimento nas tecnologias abaixo e outras mais.
+              <br /> 
+              Fique a vontade para visitar meu perfil no linkedin e no github.  
             </p>
             <h2>Tecnologias</h2>
             <DivTech>
