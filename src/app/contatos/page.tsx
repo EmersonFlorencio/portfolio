@@ -27,6 +27,11 @@ const DivContainer = styled.div`
     width: 380px;
     height: 700px;
   }
+
+  @media(max-width: 320px) {
+    width: 280px;
+    height: 700px;
+  }
 `
 
 const DivContainerImage = styled.div`
@@ -93,6 +98,12 @@ const DivContainerContact = styled.div`
     height: 300px;
     font-size: 24px;
   }
+
+  @media(max-width: 320px) {
+    width: 300px;
+    height: 300px;
+    font-size: 20px;
+  }
 `
 const DivSection = styled.div`
   display: flex;
@@ -109,8 +120,8 @@ export default function Contatos() {
     <>
       <Header />
       <DivContainer>
-          <h2>Contatos</h2>
-          <DivSection>
+        <h2>Contatos</h2>
+        <DivSection>
 
           <DivContainerImage>
             <Image
@@ -119,16 +130,17 @@ export default function Contatos() {
               height={450}
               alt="Imagem de Contato"
               property="false"
-              />  
+              priority
+            />
           </DivContainerImage>
-              <DivContainerContact>
-                <h3>Telefone</h3>
-                <p>(11) 99228-7929</p>
-                <br />
-                <h3>📨 E-mail</h3>
-                <p>emersonflorencio@hotmail.com</p>
-              </DivContainerContact>
-          </DivSection>
+          <DivContainerContact>
+            <h3>Telefone</h3>
+            <p>(11) 99228-7929</p>
+            <br />
+            <h3>📨 E-mail</h3>
+            <p>emersonflorencio@hotmail.com</p>
+          </DivContainerContact>
+        </DivSection>
       </DivContainer>
       <Footer />
     </>

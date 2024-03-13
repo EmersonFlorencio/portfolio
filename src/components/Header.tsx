@@ -43,6 +43,16 @@ const HeaderContainer = styled.header`
         height: 50px;
       }
     }
+
+    @media(max-width: 320px){
+      width: 280px;
+      height: 130px;
+      justify-content: center;
+      >div{
+        width: 200px;
+        height: 50px;
+      }
+    }
 `
 const NavContainer = styled.nav`
   gap: 40px;

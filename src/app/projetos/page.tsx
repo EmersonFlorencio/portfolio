@@ -30,6 +30,11 @@ const DivContainer = styled.div`
     font-size: 16px;
   }
 
+  @media(max-width: 320px){
+    width: 280px;
+    font-size: 16px;
+  }
+
 `
 const DivSwiper = styled.div`
   display: flex;
@@ -78,9 +83,20 @@ const DivSwiper = styled.div`
       }
     }
   }
+
+  @media(max-width: 320px) {
+    height: 650px;
+    width: 270px;
+
+    >div{
+      >div:last-child{
+        bottom: 5px;
+      }
+    }
+  }
 `
 
-const DivImage  = styled.div`
+const DivImage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,6 +165,19 @@ const DivImage  = styled.div`
       font-size: 20px;
     }
   }
+
+  @media(max-width: 320px) {
+    
+
+    >img{
+      height: 230px;
+      width: 230px;
+    }
+
+    >h4{
+      font-size: 20px;
+    }
+  }
 `
 
 const DivTech = styled.div`
@@ -169,6 +198,11 @@ const DivTech = styled.div`
         @media(max-width: 425px){
           height: 55px;
           width: 55px;
+        }
+
+        @media(max-width: 320px){
+          height: 50px;
+          width: 50px;
         }
       }
     }
@@ -248,6 +282,17 @@ const DivButton = styled.div`
       height: 2.4em;
     }
   }
+
+  @media(max-width: 320px) {
+      width: 260px;
+      gap: 15px;
+      display: flex;
+      flex-direction: column;
+
+    >a{
+      height: 2.4em;
+    }
+  }
 `
 
 export default function Projetos() {
@@ -255,64 +300,64 @@ export default function Projetos() {
     <>
       <Header />
       <DivContainer>
-          <h1>Projetos</h1>
-          <DivSwiper>
-        <Swiper
-          modules={[Pagination, EffectFade]}
-          effect={'fade'}
-          spaceBetween={20}
-          slidesPerView={1}
-          pagination={{ clickable: true, dynamicBullets: true }}
+        <h1>Projetos</h1>
+        <DivSwiper>
+          <Swiper
+            modules={[Pagination, EffectFade]}
+            effect={'fade'}
+            spaceBetween={20}
+            slidesPerView={1}
+            pagination={{ clickable: true, dynamicBullets: true }}
           >
             {data.map((item) => (
               <SwiperSlide key={item.id}>
                 <DivImage>
-                <h4>{item.name}</h4>
-                <Image
-                src={ item.imgUrl } 
-                alt="" 
-                width={700}
-                height={300}
-                />
-                <h4>Tecnologias Utilizadas</h4>
-                <DivTech>
+                  <h4>{item.name}</h4>
+                  <Image
+                    src={item.imgUrl}
+                    alt=""
+                    width={700}
+                    height={300}
+                  />
+                  <h4>Tecnologias Utilizadas</h4>
+                  <DivTech>
                     {item.icon.map((e: any, index: number) => (
                       <div key={index}>
-                        <div>{ e.iconImg }</div>
+                        <div>{e.iconImg}</div>
                       </div>
                     ))}
-                </DivTech>
-                <DivButton>
-                <Button
-                  component="a"
-                  href={item.urlRepository}
-                  target="_blank"
-                  >
-                    <GithubIcon />
-                    Repositorio
-                    <div>
-                    <CrossIcon />
-                    </div>
-                  </Button>
-                {
-                  item.urlDeploy !== '' ? 
+                  </DivTech>
+                  <DivButton>
                     <Button
-                    component="a"
-                    href={item.urlDeploy}
-                    target="_blank"
+                      component="a"
+                      href={item.urlRepository}
+                      target="_blank"
                     >
-                      Deploy
+                      <GithubIcon />
+                      Repositorio
                       <div>
-                      <CrossIcon />
+                        <CrossIcon />
                       </div>
                     </Button>
-                    : null
-                }
-                </DivButton>
+                    {
+                      item.urlDeploy !== '' ?
+                        <Button
+                          component="a"
+                          href={item.urlDeploy}
+                          target="_blank"
+                        >
+                          Deploy
+                          <div>
+                            <CrossIcon />
+                          </div>
+                        </Button>
+                        : null
+                    }
+                  </DivButton>
                 </DivImage>
               </SwiperSlide>
             ))}
-        </Swiper>
+          </Swiper>
         </DivSwiper>
       </DivContainer>
       <Footer />

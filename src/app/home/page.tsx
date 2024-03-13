@@ -25,6 +25,10 @@ const MainContainer = styled.main`
   @media(max-width: 425px){
     width: 380px;
   }
+
+  @media(max-width: 320px){
+    width: 280px;
+  }
 `
 
 const DivContainer = styled.div`
@@ -111,9 +115,17 @@ const DivContainerText = styled.div`
   @media(max-width: 425px){
     width: 360px;
     height: 300px;
-    border: red solid 2px;
     >p {
       font-size: 18px;
+      color: black;
+    }
+  }
+
+  @media(max-width: 320px){
+    width: 250px;
+    height: 250px;
+    >p {
+      font-size: 14px;
       color: black;
     }
   }
@@ -151,6 +163,13 @@ const DivContainerImage = styled.div`
     >img{
       width: 300px;
       height: 300px;
+    }
+  }
+
+  @media(max-width: 320px){
+    >img{
+      width: 250px;
+      height: 250px;
     }
   }
 `
@@ -234,6 +253,19 @@ const DivTech = styled.div`
       z-index: 99;
     }
   }
+
+  @media(max-width: 320px){
+    width: 260px;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+
+    >div{
+      width: 60px;
+      height: 60px;
+      z-index: 99;
+    }
+  }
 `
 
 export default function Home() {
@@ -244,28 +276,29 @@ export default function Home() {
         <DivContainer>
           <DivContainerText>
             <h1>Sobre Mim</h1>
-            <p>Me chamo Emerson, tenho 31 anos e moro em São Paulo/SP. 
+            <p>Me chamo Emerson, tenho 31 anos e moro em São Paulo/SP.
               <br />
               Sou desenvolvedor Full-Stack formado pela Trybe com conhecimento nas tecnologias abaixo e outras mais.
-              <br /> 
-              Fique a vontade para visitar meu perfil no linkedin e no github.  
+              <br />
+              Fique a vontade para visitar meu perfil no linkedin e no github.
             </p>
             <h2>Tecnologias</h2>
             <DivTech>
-            {icons.map((icon) => (
-              <div key={icon.id}>
-                {icon.icon}
-              </div>
-            ))}
+              {icons.map((icon) => (
+                <div key={icon.id}>
+                  {icon.icon}
+                </div>
+              ))}
             </DivTech>
           </DivContainerText>
-            <DivContainerImage>
-          <Image
+          <DivContainerImage>
+            <Image
               src="/asserts/3426526.jpg"
               width={400}
               height={400}
               alt="Imagem de uma pessoa programando"
               property="false"
+              priority
             />
           </DivContainerImage>
         </DivContainer>

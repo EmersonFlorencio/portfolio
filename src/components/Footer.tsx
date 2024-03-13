@@ -31,6 +31,10 @@ const FooterContainer = styled.footer`
   @media(max-width: 470px){
     width: 380px;
   }
+
+  @media(max-width: 320px){
+    width: 280px;
+  }  
 `
 const DivContainer = styled.div`
   color: white;
@@ -53,12 +57,16 @@ const DivContainer = styled.div`
       font-size: 20px;
     }
   }
+
+  @media(max-width: 320px){
+    width: 280px;
+  }  
 `
 
 export default function Footer() {
   return (
     <>
-    <FooterContainer>
+      <FooterContainer>
         <Link href={'https://github.com/EmersonFlorencio'} target="_blank">
           <GithubIcon />
           GitHub
@@ -67,7 +75,7 @@ export default function Footer() {
           <LinkedinIcon />
           Linkedin
         </Link>
-    </FooterContainer>
+      </FooterContainer>
       <DivContainer>
         <p>Desenvolvido Por Emerson Florencio</p>
       </DivContainer>

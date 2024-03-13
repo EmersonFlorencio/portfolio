@@ -36,6 +36,15 @@ const MainContainer = styled.main`
     height: 800px;
   }
 
+  @media(max-width: 320px){
+    font-size: 14px;
+    width: 280px;
+    height: 700px;
+
+    >h1{
+      font-size: 22px;
+    }
+  }
 `
 const DivContainer = styled.div`
   display: flex;
@@ -68,6 +77,12 @@ const DivContainer = styled.div`
     height: 200px;
   }
 
+  @media(max-width: 320px){
+    font-size: 18px;
+    width: 250px;
+    height: 150px;
+  }
+
   > h3 {
     color: gray;
   }
@@ -91,6 +106,15 @@ const DivContainerImage = styled.div`
     >img{
       width: 350px;
       height: 350px;
+    }
+  }
+
+  @media(max-width: 320px){
+    height: 250px;
+
+    >img{
+      width: 250px;
+      height: 250px;
     }
   }
 `
@@ -183,15 +207,16 @@ export default function Home() {
             <h2>Emerson Florencio</h2>
             <h3>Desenvolvedor Full-Stack</h3>
           </DivContainer>
-        <DivContainerImage>
+          <DivContainerImage>
             <Image
               src="/asserts/3426526.jpg"
               width={500}
               height={450}
               alt="Imagem de uma pessoa programando"
               property="false"
+              priority
             />
-        </DivContainerImage>
+          </DivContainerImage>
 
         </Container>
         <Link href={'/home'}>
@@ -200,7 +225,7 @@ export default function Home() {
           </BtnStyled>
         </Link>
       </MainContainer>
-    <Footer />
+      <Footer />
     </>
   )
 }
