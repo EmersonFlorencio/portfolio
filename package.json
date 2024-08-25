@@ -15,8 +15,10 @@
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
     "next": "13.4.7",
+    "portfolio": "file:",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sharp": "^0.33.5",
     "styled-components": "^6.0.0-rc.6",
     "swiper": "^10.0.4",
     "typescript": "5.1.3"

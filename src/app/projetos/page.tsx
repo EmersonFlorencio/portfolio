@@ -24,6 +24,7 @@ const DivContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 25px 40px;
+  
 
   @media(max-width: 425px){
     width: 380px;
@@ -103,6 +104,7 @@ const DivImage = styled.div`
   flex-direction: column;
   background-color: white;
   gap: 10px;
+  width: 700px;
 
   >img {
     object-fit: cover;
@@ -306,7 +308,7 @@ export default function Projetos() {
             modules={[Pagination, EffectFade]}
             effect={'fade'}
             spaceBetween={20}
-            slidesPerView={1}
+            slidesPerView={2}
             pagination={{ clickable: true, dynamicBullets: true }}
           >
             {data.map((item) => (
@@ -316,7 +318,7 @@ export default function Projetos() {
                   <Image
                     src={item.imgUrl}
                     alt=""
-                    width={700}
+                    width={400}
                     height={300}
                   />
                   <h4>Tecnologias Utilizadas</h4>
