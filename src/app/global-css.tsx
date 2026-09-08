@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle<{$whiteColor?: boolean;}>`
 
 export const BodyContainer = styled.body`
   padding: 30px;
+  font-family: "Segoe Print", "Bradley Hand", cursive;
   background: rgb(238,174,202);
   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 `

@@ -308,7 +308,7 @@ export default function Projetos() {
             modules={[Pagination, EffectFade]}
             effect={'fade'}
             spaceBetween={20}
-            slidesPerView={2}
+            slidesPerView={1}
             pagination={{ clickable: true, dynamicBullets: true }}
           >
             {data.map((item) => (

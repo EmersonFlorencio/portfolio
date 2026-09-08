@@ -9,13 +9,6 @@ import { DockerIcon } from "../components/icons/docker-icon";
 import { MysqlIcon } from "../components/icons/mysql-icon";
 import { MongodbIcon } from "../components/icons/mongodb-icon";
 
-import TrybetunesIMG from '../../public/asserts/TrybeTunesImg.png'
-import StarWarsImg from '../../public/asserts/StarWarsSearchPlanetsImg.png'
-import SolarSystemImg from '../../public/asserts/SolarSystemImg.png'
-import TrybeWallet from '../../public/asserts/TrybeWalletImg.png'
-import TrybeAndDragons from '../../public/asserts/TrybesAndDragonsImg.png'
-import BlogsApi from '../../public/asserts/BlogsApiImg.png'
-
 export const icons = [
   {id: 1, icon: <ReactIcon />},
   {id: 2, icon: <JavascriptIcon />}, 
@@ -34,7 +27,7 @@ export const data = [
     id: 1, 
     name: 'TrybeTunes',
     icon: [{iconImg: <ReactIcon />},{iconImg: <JavascriptIcon />}, {iconImg: <HtmlIcon />},{iconImg: <CssIcon  />}],
-    imgUrl: TrybetunesIMG,
+    imgUrl: '/asserts/TrybeTunesImg.png',
     urlDeploy: 'https://trybetunes-lemon.vercel.app/',
     urlRepository: 'https://github.com/EmersonFlorencio/trybetunes',
   },
@@ -42,7 +35,7 @@ export const data = [
     id: 2,
     name: 'Star Wars Planets Search',
     icon: [{ iconImg: <ReactIcon /> }, { iconImg: <JavascriptIcon /> }, { iconImg: <HtmlIcon /> } , { iconImg: <CssIcon /> }], 
-    imgUrl: StarWarsImg,
+    imgUrl: '/asserts/StarWarsSearchPlanetsImg.png',
     urlDeploy: 'https://star-wars-planets-search-five.vercel.app/',
     urlRepository: 'https://github.com/EmersonFlorencio/Star-Wars-Planets-Search',
   },
@@ -50,7 +43,7 @@ export const data = [
     id: 3,
     name: 'TrybeWallet',
     icon: [{iconImg: <ReactIcon />},{iconImg: <JavascriptIcon />}, {iconImg: <HtmlIcon />},{iconImg: <CssIcon  />}, {iconImg: <ReduxIcon />}],
-    imgUrl: TrybeWallet,
+    imgUrl: '/asserts/TrybeWalletImg.png',
     urlDeploy: '',
     urlRepository: 'https://github.com/EmersonFlorencio/TrybeWallet',
   },
@@ -58,7 +51,7 @@ export const data = [
     id: 4, 
     name: 'Solar System',
     icon: [{iconImg: <ReactIcon />},{iconImg: <JavascriptIcon />}, {iconImg: <HtmlIcon />},{iconImg: <CssIcon  />}],
-    imgUrl: SolarSystemImg,
+    imgUrl: '/asserts/SolarSystemImg.png',
     urlDeploy: '',
     urlRepository: 'https://github.com/EmersonFlorencio/Solar-System',
   },
@@ -66,7 +59,7 @@ export const data = [
     id: 5, 
     name: 'Trybers and Dragons',
     icon: [{iconImg: <TypescriptIcon />},],
-    imgUrl: TrybeAndDragons,
+    imgUrl: '/asserts/TrybesAndDragonsImg.png',
     urlDeploy: '',
     urlRepository: 'https://github.com/EmersonFlorencio/Projeto-Trybers-and-Dragons',
   },
@@ -74,7 +67,7 @@ export const data = [
     id: 6, 
     name: 'Blogs Api',
     icon: [{iconImg: <JavascriptIcon />}, {iconImg: <DockerIcon />}],
-    imgUrl: BlogsApi,
+    imgUrl: '/asserts/BlogsApiImg.png',
     urlDeploy: '',
     urlRepository: 'https://github.com/EmersonFlorencio/Blogs-Api',
   },
