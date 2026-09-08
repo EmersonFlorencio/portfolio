@@ -276,11 +276,15 @@ export default function Home() {
         <DivContainer>
           <DivContainerText>
             <h1>Sobre Mim</h1>
-            <p>Me chamo Emerson, tenho 31 anos e moro em São Paulo/SP.
-              <br />
-              Sou desenvolvedor Full-Stack formado pela Trybe com conhecimento nas tecnologias abaixo e outras mais.
-              <br />
-              Fique a vontade para visitar meu perfil no linkedin e no github.
+            <p>Sou Desenvolvedor Web Full Stack Júnior, formado pela Trybe, escola de programação com foco na formação prática de desenvolvedores para o mercado. Concluí mais de 1.500 horas de formação intensiva em desenvolvimento de software, abrangendo Front-end, Back-end, Ciência da Computação e Engenharia de Software.
+
+              Tenho experiência no desenvolvimento de aplicações web em projetos individuais e em grupo, aplicando metodologias ágeis (Scrum), versionamento de código e boas práticas de arquitetura e testes. Atuo com tecnologias modernas amplamente utilizadas pelo mercado, como React.js, Next.js, TypeScript, Node.js, APIs REST e bancos de dados SQL.
+
+              Minha trajetória profissional anterior em áreas administrativas e atendimento ao cliente contribuiu para o desenvolvimento de habilidades como organização, responsabilidade com sistemas, comunicação clara e trabalho em equipe — competências que aplico diretamente no desenvolvimento de software.
+
+              Busco minha primeira oportunidade como Desenvolvedor Júnior para aplicar meus conhecimentos técnicos, evoluir continuamente e contribuir com soluções eficientes e de qualidade em ambientes colaborativos.
+
+              Projetos: Github: https://github.com/EmersonFlorencio
             </p>
             <h2>Tecnologias</h2>
             <DivTech>
