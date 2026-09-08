@@ -10,7 +10,7 @@ import { icons } from "../../utils/data";
 const MainContainer = styled.main`
   color: black;
   background-color: white;
-  height: 600px;
+  height: 900px;
   padding: 15px 34px;
   font-size: 30px;
 
@@ -44,7 +44,7 @@ const DivContainer = styled.div`
 `
 
 const DivContainerText = styled.div`
-  width: 900px;
+  width: 1100px;
   height: 400pxd;
   font-size: 20px;
   color: gray;
@@ -136,8 +136,8 @@ const DivContainerImage = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 800px;
-  height: 400px;
+  width: 600px;
+  height: 600px;
 
   @media(max-width: 748px){
     width: 400px;
@@ -277,8 +277,9 @@ export default function Home() {
           <DivContainerText>
             <h1>Sobre Mim</h1>
             <br />
-            <p>Sou Desenvolvedor Web Full Stack Júnior, formado pela Trybe, escola de programação com foco na formação prática de desenvolvedores para o mercado. Concluí mais de 1.500 horas de formação intensiva em desenvolvimento de software, abrangendo Front-end, Back-end, Ciência da Computação e Engenharia de Software.
-              Tenho experiência no desenvolvimento de aplicações web em projetos individuais e em grupo, aplicando metodologias ágeis (Scrum), versionamento de código e boas práticas de arquitetura e testes. Atuo com tecnologias modernas amplamente utilizadas pelo mercado, como React.js, Next.js, TypeScript, Node.js, APIs REST e bancos de dados SQL.
+            <p>Sou Desenvolvedor Web Full Stack Júnior, formado pela Trybe. Concluí mais de 1.500 horas de formação intensiva em desenvolvimento de software, abrangendo Front-end, Back-end, Ciência da Computação e Engenharia de Software.
+              Tenho experiência no desenvolvimento aplicando metodologias ágeis (Scrum), versionamento de código e boas práticas de arquitetura e testes. Atuo com tecnologias modernas como React.js, Next.js, TypeScript, Node.js, APIs REST e SQL.
+              <br />
               <br />
               Projetos: Github: https://github.com/EmersonFlorencio
             </p>
@@ -294,8 +295,8 @@ export default function Home() {
           <DivContainerImage>
             <Image
               src="/asserts/3426526.jpg"
-              width={400}
-              height={400}
+              width={300}
+              height={300}
               alt="Imagem de uma pessoa programando"
               property="false"
               priority
